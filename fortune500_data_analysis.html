@@ -47,29 +47,45 @@
 									<h1>US Fortune500 2025 Data Analysis</h1>
 									<p>
 										In this project, we grab the raw dataset via Web Scraping from 50pros.com website. Web Scraping is done by manually inspect the respective web page and copy-paste it into a text file.
-										Then, I put it in my local webserver and successfully grab the table using Pandas module of Python directly into usable Dataframe.
+										Then, I put it in my local webserver and successfully grab the table using Pandas module of Python directly into usable Dataframe. Why do I have to do it the hard way? Because if I directly
+										grab it with Pandas or BeautifulSoup (maybe this one is a little out of date 😁), I just get 100 of them. API pulling access is not always easy to get. So, here we are,
+										with a little tweak here and there, voila! Finally, we got the raw dataset! Let's dig it!
 									</p>
 									<p>
-										Out of 10 Columns/Fields and 500 rows of raw data, I try to dig deep into various insights and, turns out, many many insights I can come up with.
+										Out of 10 Columns/Fields and 500 rows of raw data, I try to dig deep into various insights and, turns out, many many insights I can come up with. Here's the complete list of insights I got.
+										But, hey, wait... Let's take a brief look at how 500 biggest revenue companies spread out all over USA! Here we are!
+										
+										<div class="image main"><img src="images/fortune500_comps_map.png" alt="" /></div>
 									</p>
 								</header>
-								<div class="image main"><img src="images/heatmap_nashville.png" alt="" /></div>
-								<p>Turns out, as we can see, from the Heatmap Chart, there are several parameters that have pretty close correlation with each other, for example: relative_humidity_2m and vapour_pressure_deficit, dew_point_2m and temperature_80m.</p>
-								<p>The complete correlation conclusion:
-									<ul>		
-										<li> 'relative_humidity_2m' has correlation of -0.86 to 'vapour_pressure_deficit'.
-										<li> 'temperature_80m' has correlation of 0.92 to 'temperature_2m'.
-										<li> 'temperature_80m' has correlation of 0.86 to 'soil_temperature_0cm'.
-										<li> 'temperature_80m' has correlation of 0.71 to 'dew_point_2m'.
-										<li> 'temperature_2m' has correlation of 0.92 to 'soil_temperature_0cm'.
-										<li> 'dew_point_2m' has correlation of 0.81 to 'relative_humidity_2m' parameter if temperature_2m > 18C, compared to 0.56 with all data included.
-										<li> 'cloud_cover_mid' has correlation of 0.51 to 'precipitation_probability'.
-										<li> 'cloud_cover_low' has correlation of 0.52 to 'relative_humidity_2m'
-										<li> 'soil_moisture_0_to_1cm' has correlation of 0.59 to 'relative_humidity_2m'.
-										<li> 'soil_temperature_0cm has correlation of 0.63 to 'dew_point_2m'.
-										<li> 'vapour_pressure_deficit' has correlation of 0.65 to 'temperature_2m'.	
-									</ul>
-								</p>
+							</section>
+							<p>OK, here's the list of insights I've digged out of 10-by-500 table:
+								<ol>
+									<li>The Largest Revenue Company in each State</li>
+									<li>The Smallest Revenue Company in each State</li>
+									<li>Total Revenue in each State (State that has the Biggest Revenue)</li>
+									<li>Average Revenue in each State (State that has the Biggest Average Revenue)</li>
+									<li>The Largest Employer Company in each State</li>
+									<li>The Smallest Employer Company in each State</li>
+									<li>Total Employee in each State (The Biggest Employer State)</li>
+									<li>Average Number of Employee in each State (The Biggest Average Number of Employee State)</li>
+									<li>The Most Efficient Company in each State</li>
+									<li>The Least Efficient Company in each State</li>
+									<li>The Average Efficiency in each State</li>
+									<li>The Largest Revenue Company in each City</li>
+									<li>The Smallest Revenue Company in each City</li>
+									<li>Total Revenue in each City (City that has the Biggest Revenue)</li>
+									<li>Average Revenue in each City (City that has the Biggest Average Revenue)</li>
+									<li>The Largest Employer Company in each City</li>
+									<li>The Smallest Employer Company in each City</li>
+									<li>Total Employee in each City (The Biggest Employer City)</li>
+									<li>Average Number of Employee in each City (The Biggest Average Number of Employee City)</li>
+									<li>The Most Efficient Company in each City</li>
+									<li>The Least Efficient Company in each City</li>
+									<li>The Average Efficiency in each City</li>
+								</ol>
+							</p>
+
 								<br>Our most concern about weather is how big the precipitation_probability is. The bigger the precipitation_probability, the bigger the chance we'll have rain that will give fresh water to our environment.
 									One of our conclusion from the analysis is when <b>relative_humidity_2m</b> reaches maximum, the <b>precipitation_probability</b> is one of the highest also. 
 								</p>
